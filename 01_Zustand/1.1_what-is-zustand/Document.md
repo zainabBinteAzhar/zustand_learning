@@ -28,6 +28,8 @@ Third-party libraries: Redux, Zustand etc...
 - Zustand store is a hook:
 A Zustand store is created using a custom hook (e.g., useBookStore). This hook allows React components to read and update shared state.
 
+> *Since Zustand stores are hooks, you can use them anywhere—no context provider needed (unlike Redux). Just select the state slice with a selector, and your component re-renders only when that slice changes.*
+
 - Create is used to build the store:
 The create function from Zustand sets up the state, initial values, and the functions (actions) that modify the state.
 
@@ -47,3 +49,5 @@ Zustand manages state simply:
 - The UI then re-renders with the new state.  
 
 There are no action creators, reducers, or dispatchers—just direct updates and subscriptions to keep everything in sync.
+
+*Since Zustand stores are hooks, you can use them anywhere—no context provider needed (unlike Redux). Just select the state slice with a selector, and your component re-renders only when that slice changes.*
