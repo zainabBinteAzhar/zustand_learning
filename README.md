@@ -8,13 +8,14 @@ This repository contains a complete roadmap for understanding and implementing Z
 ### 1.1: What is Zustand?
 
 - Overview of Zustand as a small, fast, and scalable state management library.
-- How it differs from Context API, Redux, and other solutions.
+- How it works.
 
 ---
 
 ### 1.2: Why Zustand?
 
 - When to choose Zustand over other solutions.
+- How it differs from Context API, Redux, and other solutions.
 - Benefits: simplicity, performance, minimal boilerplate.
 
 ---
@@ -31,7 +32,8 @@ This repository contains a complete roadmap for understanding and implementing Z
 
 ### 2.1: React Fundamentals
 - Functional components
-- `useState`, `useReducer`, `useEffect`, `useCallback`, `useMemo`
+- `useState`, `useReducer`, `useEffect`, `useCallback`, `useMemo`, `useContext`
+- Context API
 
 ### 2.2: JavaScript Concepts
 - Closures
