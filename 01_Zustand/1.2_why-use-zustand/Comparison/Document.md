@@ -1,4 +1,4 @@
-## When to Choose Zustand
+# When to Choose Zustand
 
 - You want **minimal boilerplate** and easy setup.
 - Need **global state** without using `<Context.Provider>`.
