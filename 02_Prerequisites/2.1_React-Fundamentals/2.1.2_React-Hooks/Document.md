@@ -98,6 +98,8 @@ const theme = useContext(ThemeContext);
 
 ## 🔹 useReducer
 
+`useReducer lets you store and update all related state values in one central place — through a single reducer function.`
+
 ### 🧩 Problem  
 Managing complex or multiple related states with `useState` was messy.
 
@@ -109,18 +111,19 @@ Provides reducer-based state handling like Redux.
 const [state, dispatch] = useReducer(reducerFn, initialState);
 ```
 
-### 🧪 Example  
-```js
-function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    default:
-      return state;
-  }
-}
 
-const [state, dispatch] = useReducer(reducer, { count: 0 });
+### 🔁 Without `useReducer` (using multiple `useState`):
+```js
+const [count, setCount] = useState(0);
+const [name, setName] = useState('');
+const [isActive, setIsActive] = useState(false);
+```
+
+---
+
+### ✅ With `useReducer` (centralized state):
+
+```const [state, dispatch] = useReducer(reducer, { count: 0 });
 dispatch({ type: 'increment' });
 ```
 
@@ -128,6 +131,7 @@ dispatch({ type: 'increment' });
 
 ## 🔹 useRef
 
+`useRef is used when we need to store a value (like counter, timer, DOM reference) that should persist across renders but should not trigger a re-render when it changes.`
 ### 🧩 Problem  
 Needed to persist values without causing re-renders.
 
@@ -151,6 +155,8 @@ const inputRef = useRef(null);
 ---
 
 ## 🔹 useMemo
+
+`It is used to cache (memoize) the result of a computation — like filtering, mapping, or sorting — to avoid redoing it on every render.`
 
 ### 🧩 Problem  
 Expensive calculations re-ran on every render.
@@ -204,4 +210,3 @@ const handleClick = useCallback(() => {
 | `useCallback` | Prevent unnecessary function re-creation |
 
 ---
-
