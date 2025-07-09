@@ -33,6 +33,7 @@ type CartStore = {
 export const useCartStore = create<CartStore>()(
 
     // Wrap the store with `persist` middleware to save and rehydrate state.
+    // Uses persist middleware to save data across app reloads
     persist(
 
         /**
@@ -72,7 +73,7 @@ export const useCartStore = create<CartStore>()(
          */
         {
             name: 'cart-storage', // Key under which cart data is stored
-            storage: createJSONStorage(() => AsyncStorage), // Use AsyncStorage in React Native
+            storage: createJSONStorage(() => AsyncStorage), // Use AsyncStorage in React Native (place where data will stay stored for an app reload)
         }
     )
 );
